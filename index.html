@@ -1,102 +1,55 @@
 <!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="style.css">
-  <title>苺</title>
+<meta charset="utf-8">
+<style>
+h1 {font-size:250%;}
+
+#menu {
+  width: 640px;
+  height: 100vh;
+  text-align: left;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+#menu a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  margin-bottom: 10px;
+}
+</style>
+<base target="_blank">
+<title id="page-title"></title>
 </head>
 <body>
+
+<div id="menu">
+    <a id="link-html" href="">
+        <h1 id="display-title"></h1>
+    </a>
+    <a id="link-zip" href="">zipファイル</a>
+</div>
+
 <script>
-  const START_MSG = "Enter⏎でスタート"
-  const INPUT_MSG = "かな 確認"
-  const RANDOM = 0
-  const WIDTH = "25ch"
+    // 1. 基本となる名前を定義
+    const baseName = "X";
+
+    // 2. ベースから各文字列を生成
+    const fullTitle = baseName + "タイピング";
+    const generatedHtml = baseName + ".html";
+    const generatedZip = baseName + ".zip";
+
+    // 3. 各要素に代入（反映）
+    // タブのタイトルを代入
+    document.getElementById('page-title').textContent = fullTitle;
+    // 見出しを代入
+    document.getElementById('display-title').textContent = fullTitle;
+    // リンク先(href)をそれぞれ設定
+    document.getElementById('link-html').href = generatedHtml;
+    document.getElementById('link-zip').href = generatedZip;
 </script>
-<!---5----10---15---20---25---30---35---40--->
-<textarea id="txtdata" hidden>
-とちおとめ
-あまおう
-さちのか
-紅ほっぺ
-章姫
-さがほのか
-ゆめのか
-もういっこ
-いばらキッス
-スカイベリー
-とちあいか
-きらぴ香
-いちごさん
-恋みのり
-ゆうべに
-おいCベリー
-あきひめ
-女峰
-宝交早生
-越後姫
-ひのしずく
-まりひめ
-かなこい
-あまりん
-かおりん
-淡雪
-パールホワイト
-ミルキーベリー
-白苺
-真紅の美鈴
-チーバベリー
-ベリーホップ
-なつおとめ
-すずあかね
-サマープリンセス
-なつみずき
-桃薫
-よつぼし
-はるひ
-すず
-東京おひさまベリー
-空浮いちご
-咲姫
-とっておき
-ベリーポップすず
-ベリーポップはるひ
-天使のいちご
-ローズベリーレッド
-デルモンテビリベリー
-めちゃデカッ!いちご
-アイベリー
-ふくはる香
-ふくあや香
-おとめ心
-あかしゃのいちご
-紅い雫
-甘蜜香
-珠姫
-古都華
-アスカルビー
-ならあかり
-晴苺
-ベリーつみ
-ベリーパレット
-あまみつ
-こいのか
-ほしうらら
-スターナイト
-ほほえみ
-ハレノヒ
-</textarea>
-<!---5----10---15---20---25---30---35---40--->
-  <div id="title"></div>
-  <div id="result"></div>
-  <div id="target" class="line" 
-    style="text-align:center"></div>
-  <textarea id="editor" class="line" 
-    spellcheck="false" rows="1">
-  </textarea>
-  <script src="typing.js" defer></script>
-<!--
-<div id="exp"></div>
-<img src=".png" style="width:800px;">
--->
 </body>
 </html>
