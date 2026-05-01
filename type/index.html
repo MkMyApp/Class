@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<style>
+h1 {font-size:250%;}
+
+#menu {
+  width: 640px;
+  height: 100vh;
+  text-align: left;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+#menu a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  margin-bottom: 10px;
+}
+</style>
+<base target="_blank">
+<title id="page-title"></title>
+</head>
+<body>
+
+<div id="menu">
+    <a id="link-html" href="">
+        <h1 id="display-title"></h1>
+    </a>
+    <a id="link-zip" href="">zipファイル</a>
+</div>
+
+<script>
+    // 1. 基本となる名前を定義
+    const baseName = "type";
+
+    // 2. ベースから各文字列を生成
+    const fullTitle = baseName + "タイピング";
+    const generatedHtml = baseName + ".html";
+    const generatedZip = baseName + ".zip";
+
+    // 3. 各要素に代入（反映）
+    // タブのタイトルを代入
+    document.getElementById('page-title').textContent = fullTitle;
+    // 見出しを代入
+    document.getElementById('display-title').textContent = fullTitle;
+    // リンク先(href)をそれぞれ設定
+    document.getElementById('link-html').href = generatedHtml;
+    document.getElementById('link-zip').href = generatedZip;
+</script>
+</body>
+</html>
