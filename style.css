@@ -1,6 +1,6 @@
 :root{
-  --line-width:10em;
-  --line-font-size:4em;
+  --line-width:800px;
+  --line-font-size:64px;
   --line-height:1.2;
   --line-padding-x:8px;
   --line-border:1px solid #c0c0c0;
@@ -35,7 +35,6 @@ body{
   line-height:var(--line-height);
 }
 
-/* お題表示 */
 #target{
   padding:6px var(--line-padding-x);
   border:var(--line-border);
@@ -62,4 +61,16 @@ body{
   overflow:hidden;
   height:calc(1em * var(--line-height) + 12px);
   min-height:calc(1em * var(--line-height) + 12px);
+}
+
+#exp {
+  white-space: pre-wrap;
+	text-align: left;
+	width: 500px;
+	padding: 20px;
+	margin: 50px auto;
+	border: 2px solid #ccc;
+	font-size: 1em;
+	line-height:1.5em;
+	cursor: pointer;
 }
