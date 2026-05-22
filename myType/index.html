@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+  <title>タイピング練習</title>
+</head>
+<body>
+<script>
+  const TITLE_MSG = "音声確認";
+  const START_MSG = "Enter⏎"
+  const INPUT_MSG = "英数 確認"
+  const RANDOM = 10
+  const WIDTH = "25ch"
+</script>
+<!---5----10---15---20---25---30---35---40--->
+<textarea id="txtdata" hidden>
+a
+b
+c
+d
+e
+f
+g
+h
+i
+j
+k
+l
+m
+n
+o
+p
+q
+r
+s
+t
+y
+v
+w
+x
+y
+z
+</textarea>
+<!---5----10---15---20---25---30---35---40--->
+  <div id="title"></div>
+  <div id="result"></div>
+  <div id="target" class="line" 
+    style="text-align:center"></div>
+  <textarea id="editor" class="line" 
+    spellcheck="false" rows="1">
+  </textarea>
+  <script src="typing.js" defer></script>
+  <script src="voice.js" defer></script>
+<!--
+<div id="exp"></div>
+<img src=".png" style="width:800px;">
+-->
+</body>
+</html>
